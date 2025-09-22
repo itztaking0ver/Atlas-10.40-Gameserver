@@ -143,8 +143,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Engine\Plugins\Crystal\Lategame\Public\Lategame.h" />
-    <ClInclude Include="Engine\Plugins\Crystal\Public\Crystal.h" />
+    <ClInclude Include="Engine\Plugins\Atlas\Lategame\Public\Lategame.h" />
+    <ClInclude Include="Engine\Plugins\Atlas\Public\Atlas.h" />
     <ClInclude Include="Engine\Runtime\Engine\Actor\Public\Actor.h" />
     <ClInclude Include="Engine\Runtime\Engine\DispatchRequest\Public\DispatchRequest.h" />
     <ClInclude Include="Engine\Runtime\Engine\NetDriver\Public\NetDriver.h" />
@@ -173,8 +173,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="Engine\Plugins\Crystal\Lategame\Private\Lategame.cpp" />
-    <ClCompile Include="Engine\Plugins\Crystal\Private\Crystal.cpp" />
+    <ClCompile Include="Engine\Plugins\Atlas\Lategame\Private\Lategame.cpp" />
+    <ClCompile Include="Engine\Plugins\Atlas\Private\Atlas.cpp" />
     <ClCompile Include="Engine\Runtime\Engine\Actor\Private\Actor.cpp" />
     <ClCompile Include="Engine\Runtime\Engine\DispatchRequest\Private\DispatchRequest.cpp" />
     <ClCompile Include="Engine\Runtime\Engine\NetDriver\Private\NetDriver.cpp" />

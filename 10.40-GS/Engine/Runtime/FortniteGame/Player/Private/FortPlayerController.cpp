@@ -1,8 +1,8 @@
 #include "../Public/FortPlayerController.h"
 #include "../../../GameplayAbilities/Public/AbilitySystemComponent.h"
-#include "../../../../Plugins/Crystal/Public/Crystal.h"
+#include "../../../../Plugins/Atlas/Public/Atlas.h"
 #include "../../Inventory/Public/FortInventory.h"
-#include "../../../../Plugins/Crystal/Lategame/Public/Lategame.h"
+#include "../../../../Plugins/Atlas/Lategame/Public/Lategame.h"
 
 void FortPlayerController::ServerCheat(AFortPlayerController* Controllerss, FString Message)
 {
@@ -301,7 +301,7 @@ void FortPlayerController::ServerAttemptAircraftJump(UObject* Context, FFrame& S
     auto GameState = UWorld::GetWorld()->GameState->Cast<AFortGameStateAthena>();
     auto GameMode = UWorld::GetWorld()->AuthorityGameMode->Cast<AFortGameModeAthena>();
 
-    if (!UCrystal->bLategame) callOG(PlayerController, "/Script/FortniteGame.FortPlayerController", ServerAttemptAircraftJump, Rotation);
+    if (!UAtlas->bLategame) callOG(PlayerController, "/Script/FortniteGame.FortPlayerController", ServerAttemptAircraftJump, Rotation);
     else {
         GameMode->RestartPlayer(PlayerController);
         if (PlayerController->MyFortPawn) {
@@ -315,7 +315,7 @@ void FortPlayerController::ServerAttemptAircraftJump(UObject* Context, FFrame& S
         }
     }
 
-    if (UCrystal->bLategame && PlayerController->MyFortPawn) {
+    if (UAtlas->bLategame && PlayerController->MyFortPawn) {
         PlayerController->MyFortPawn->SetHealth(100);
         PlayerController->MyFortPawn->SetShield(100);
 

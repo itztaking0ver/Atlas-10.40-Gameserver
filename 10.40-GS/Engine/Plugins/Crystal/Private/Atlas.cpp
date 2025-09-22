@@ -1,4 +1,4 @@
-#include "../Public/Crystal.h"
+#include "../Public/Atlas.h"
 #include "../../../Runtime/FortniteGame/Athena/Public/FortGameModeAthena.h"
 #include "../../../Runtime/Engine/NetDriver/Public/NetDriver.h"
 #include "../../../Runtime/FortniteGame/Athena/Public/FortPlayerControllerAthena.h"
@@ -16,7 +16,7 @@
 #include "../../../Runtime/FortniteGame/Creative/Public/FortMinigameSettingsBuilding.h"
 #include "../../../Runtime/Engine/Actor/Public/Actor.h"
 
-void Crystal::SetState(const std::string& State)
+void Atlas::SetState(const std::string& State)
 {
 	std::wostringstream oss;
 	oss << L"10.40 | " << std::wstring(State.begin(), State.end());
@@ -24,7 +24,7 @@ void Crystal::SetState(const std::string& State)
 	SetConsoleTitleW(oss.str().c_str());
 }
 
-void Crystal::Initialize()
+void Atlas::Initialize()
 {
 	Sleep(5000);
 	MH_Initialize();

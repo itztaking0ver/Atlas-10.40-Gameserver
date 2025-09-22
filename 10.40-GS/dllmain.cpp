@@ -1,13 +1,13 @@
 #include "framework.h"
-#include "Engine/Plugins/Crystal/Public/Crystal.h"
+#include "Engine/Plugins/Atlas/Public/Atlas.h"
 
 void Main() {
     AllocConsole();
     FILE* F;
     freopen_s(&F, "CONOUT$", "w", stdout);
 
-    UCrystal->SetState("Loading");
-    UCrystal->Initialize();
+    UAtlas->SetState("Loading");
+    UAtlas->Initialize();
 }
 
 bool DllMain(HMODULE Module, DWORD Reason, LPVOID Reserved)

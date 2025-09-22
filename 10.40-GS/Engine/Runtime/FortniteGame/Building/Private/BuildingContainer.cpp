@@ -2,7 +2,7 @@
 #include "../../Inventory/Public/FortInventory.h"
 #include <algorithm>
 
-// reminder, this is crystal gs that was made in like a week. so this code below is skidded
+// reminder, this is Atlas gs that was made in like a week. so this code below is skidded
 template<typename T>
 T* SelectWeightedEntry(const std::vector<T*>& Entries)
 {

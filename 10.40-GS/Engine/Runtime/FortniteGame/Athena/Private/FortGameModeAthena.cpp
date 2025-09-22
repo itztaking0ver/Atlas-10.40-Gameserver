@@ -1,5 +1,5 @@
 #include "../Public/FortGameModeAthena.h"
-#include "../../../../Plugins/Crystal/Public/Crystal.h"
+#include "../../../../Plugins/Atlas/Public/Atlas.h"
 #include "../Public/FortPlaylistAthena.h"
 #include "../../Inventory/Public/FortInventory.h"
 #include "../../Creative/Public/FortPlaysetItemDefinition.h"
@@ -25,22 +25,22 @@ bool FortGameModeAthena::ReadyToStartMatch(UObject* Context, FFrame& Stack, bool
 
 	auto GameState = (AFortGameStateAthena*)GameMode->GameState;
 
-	if (!UCrystal->bCreative) {
+	if (!UAtlas->bCreative) {
 		if (!GameState->MapInfo) return false;
 	}
 
 	if (GameMode->CurrentPlaylistId == -1)
 	{
-		FortPlaylistAthena::AssignPlaylist(Runtime::StaticFindObject<UFortPlaylistAthena>(UCrystal->PlaylistID), GameMode);
+		FortPlaylistAthena::AssignPlaylist(Runtime::StaticFindObject<UFortPlaylistAthena>(UAtlas->PlaylistID), GameMode);
 
 		ShowFoundation(Runtime::StaticFindObject<ABuildingFoundation>("/Game/Athena/Maps/Athena_POI_Foundations.Athena_POI_Foundations.PersistentLevel.LF_Athena_StreamingTest16"));
 		ShowFoundation(Runtime::StaticFindObject<ABuildingFoundation>("/Game/Athena/Maps/Athena_POI_Foundations.Athena_POI_Foundations.PersistentLevel.SLAB_1"));
 
-		if (!UCrystal->bCreative)
+		if (!UAtlas->bCreative)
 		{
 			FortAthenaVehicle::SpawnVehicles();
 			xmap<FName, FFortLootTierData*> LootTierDataTempArr;
-			auto LootTierData = Runtime::StaticFindObject<UFortPlaylistAthena>(UCrystal->PlaylistID)->LootTierData.Get();
+			auto LootTierData = Runtime::StaticFindObject<UFortPlaylistAthena>(UAtlas->PlaylistID)->LootTierData.Get();
 			if (!LootTierData)
 				LootTierData = Runtime::StaticFindObject<UDataTable>("/Game/Items/Datatables/AthenaLootTierData_Client.AthenaLootTierData_Client");
 			for (auto& [Key, Val] : (TMap<FName, FFortLootTierData*>) LootTierData->RowMap) {
@@ -48,7 +48,7 @@ bool FortGameModeAthena::ReadyToStartMatch(UObject* Context, FFrame& Stack, bool
 			}
 
 			xmap<FName, FFortLootPackageData*> LootPackageTempArr;
-			auto LootPackages = Runtime::StaticFindObject<UFortPlaylistAthena>(UCrystal->PlaylistID)->LootPackages.Get();
+			auto LootPackages = Runtime::StaticFindObject<UFortPlaylistAthena>(UAtlas->PlaylistID)->LootPackages.Get();
 			if (!LootPackages) LootPackages = Runtime::StaticFindObject<UDataTable>("/Game/Items/Datatables/AthenaLootPackages_Client.AthenaLootPackages_Client");
 			for (auto& [Key, Val] : (TMap<FName, FFortLootPackageData*>) LootPackages->RowMap) {
 				BuildingContainer::LPGroupsAll.push_back(Val);
@@ -64,7 +64,7 @@ bool FortGameModeAthena::ReadyToStartMatch(UObject* Context, FFrame& Stack, bool
 
 	if (!UWorld::GetWorld()->NetDriver)
 	{
-		auto Starts = UCrystal->bCreative ? (TArray<AActor*>) Runtime::GetAll<AFortPlayerStartCreative>() : (TArray<AActor*>) Runtime::GetAll<AFortPlayerStartWarmup>();
+		auto Starts = UAtlas->bCreative ? (TArray<AActor*>) Runtime::GetAll<AFortPlayerStartCreative>() : (TArray<AActor*>) Runtime::GetAll<AFortPlayerStartWarmup>();
 		auto StartsNum = Starts.Num();
 
 		Starts.Free();
@@ -90,7 +90,7 @@ bool FortGameModeAthena::ReadyToStartMatch(UObject* Context, FFrame& Stack, bool
 
 		((InitListenType)Runtime::Offsets::InitListen)(NetDriver, UWorld::GetWorld(), URL, false, Err);
 		((SetWorldType)Runtime::Offsets::SetWorld)(NetDriver, UWorld::GetWorld());
-		UCrystal->SetState("Listening");
+		UAtlas->SetState("Listening");
 	}
 
 	return *Result = callOGWithRet(GameMode, "/Script/Engine.GameMode", ReadyToStartMatch);
@@ -145,7 +145,7 @@ void FortGameModeAthena::OnAircraftExitedDropZone(UObject* Context, FFrame& Stac
 	Stack.IncrementCode();
 	auto GameMode = static_cast<AFortGameModeAthena*>(Context);
 
-	if (UCrystal->bLategame)
+	if (UAtlas->bLategame)
 	{
 		for (auto& Player : GameMode->AlivePlayers)
 		{
@@ -189,7 +189,7 @@ void FortGameModeAthena::HandleStartingNewPlayer(UObject* Context, FFrame& Stack
 		NewPlayer->MatchReport = reinterpret_cast<UAthenaPlayerMatchReport*>(UGameplayStatics::SpawnObject(UAthenaPlayerMatchReport::StaticClass(), NewPlayer));
 	}
 
-	if (UCrystal->bCreative && !bFirstPlayer)
+	if (UAtlas->bCreative && !bFirstPlayer)
 	{
 		AFortCreativePortalManager* PortalManager = GameState->CreativePortalManager;
 
@@ -285,7 +285,7 @@ void FortGameModeAthena::StartNewSafeZonePhase(AFortGameModeAthena* GameMode, in
 {
 	auto GameState = (AFortGameStateAthena*)GameMode->GameState;
 
-	if (UCrystal->bLategame)
+	if (UAtlas->bLategame)
 	{
 		static auto RafiusOffset = GameMode->SafeZoneIndicator->GetSafeZoneRadius();
 		static int LateGamePhase = GameMode->SafeZonePhase = 3;
@@ -415,7 +415,7 @@ bool FortGameModeAthena::StartAircraftPhase(AFortGameModeAthena* GameMode, char 
 {
 	auto GameState = (AFortGameStateAthena*)GameMode->GameState;
 
-	if (UCrystal->bLategame)
+	if (UAtlas->bLategame)
 	{
 		auto LocalAircraft = GameState->GetAircraft(0);
 		if (!LocalAircraft) {
@@ -472,7 +472,7 @@ void FortGameModeAthena::Patch()
 
 	Runtime::Exec("/Script/FortniteGame.FortGameModeAthena.OnAircraftEnteredDropZone", OnAircraftEnteredDropZone, OnAircraftEnteredDropZoneOG);
 
-	if (UCrystal->bCreative) Runtime::Hook(Runtime::Offsets::ImageBase + 0x11d42b0, PickTeam, (void**)&PickTeamOG);
+	if (UAtlas->bCreative) Runtime::Hook(Runtime::Offsets::ImageBase + 0x11d42b0, PickTeam, (void**)&PickTeamOG);
 	Runtime::Hook(Runtime::Offsets::ImageBase + 0x11e4cb0, StartAircraftPhase, (void**)&StartAircraftPhaseOG);
 	Runtime::Hook(Runtime::Offsets::StartNewSafeZonePhase, StartNewSafeZonePhase, (void**)&StartNewSafeZonePhaseOG);
 }

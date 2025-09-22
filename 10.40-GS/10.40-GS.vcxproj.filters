@@ -33,7 +33,7 @@
     <ClInclude Include="Runtime.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\Plugins\Crystal\Public\Crystal.h">
+    <ClInclude Include="Engine\Plugins\Atlas\Public\Atlas.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Engine\Runtime\GameplayAbilities\Public\AbilitySystemComponent.h">
@@ -84,7 +84,7 @@
     <ClInclude Include="Engine\Runtime\FortniteGame\Creative\Public\FortAthenaCreativePortal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\Plugins\Crystal\Lategame\Public\Lategame.h">
+    <ClInclude Include="Engine\Plugins\Atlas\Lategame\Public\Lategame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Engine\Runtime\Engine\Actor\Public\Actor.h">
@@ -119,7 +119,7 @@
     <ClCompile Include="Runtime.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\Plugins\Crystal\Private\Crystal.cpp">
+    <ClCompile Include="Engine\Plugins\Atlas\Private\Atlas.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Engine\Runtime\GameplayAbilities\Private\AbilitySystemComponent.cpp">
@@ -170,7 +170,7 @@
     <ClCompile Include="Engine\Runtime\FortniteGame\Creative\Private\FortAthenaCreativePortal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\Plugins\Crystal\Lategame\Private\Lategame.cpp">
+    <ClCompile Include="Engine\Plugins\Atlas\Lategame\Private\Lategame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Engine\Runtime\Engine\Actor\Private\Actor.cpp">

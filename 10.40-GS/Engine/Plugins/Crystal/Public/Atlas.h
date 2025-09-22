@@ -1,11 +1,11 @@
 #pragma once
 #include "../framework.h"
 
-#ifdef Crystal
-#undef Crystal
+#ifdef Atlas
+#undef Atlas
 #endif
 
-class Crystal
+class Atlas
 {
 public:
     bool bCreative = false;
@@ -17,4 +17,4 @@ public:
     void Initialize();
 };
 
-inline Crystal* UCrystal = NULL;
+inline Atlas* UAtlas = NULL;

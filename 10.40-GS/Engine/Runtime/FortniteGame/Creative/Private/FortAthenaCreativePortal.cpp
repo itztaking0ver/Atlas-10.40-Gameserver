@@ -1,7 +1,7 @@
 #include "../Public/FortAthenaCreativePortal.h"
 #include "../../Inventory/Public/FortInventory.h"
-#include "../../../../Plugins/Crystal/Public/Crystal.h"
-#include "../../../../Plugins/Crystal/Lategame/Public/Lategame.h"
+#include "../../../../Plugins/Atlas/Public/Atlas.h"
+#include "../../../../Plugins/Atlas/Lategame/Public/Lategame.h"
 
 // scuffed phone system and islands
 static std::vector<std::string> Islands;
@@ -79,7 +79,7 @@ void FortAthenaCreativePortal::ServerTeleportToPlaygroundLobbyIsland(AFortPlayer
 
 void FortAthenaCreativePortal::Patch()
 {
-    if (UCrystal->bCreative) {
+    if (UAtlas->bCreative) {
         Runtime::Exec("/Script/FortniteGame.FortAthenaCreativePortal.TeleportPlayerToLinkedVolume", TeleportPlayerToLinkedVolume);
         Runtime::Exec("/Script/FortniteGame.FortPlayerControllerAthena.ServerTeleportToPlaygroundLobbyIsland", ServerTeleportToPlaygroundLobbyIsland);
     }
