@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D38A0280}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Plugins">
+      <UniqueIdentifier>{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC943}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Plugins\Atlas">
+      <UniqueIdentifier>{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC944}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Runtime">
+      <UniqueIdentifier>{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC945}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Runtime\Engine">
+      <UniqueIdentifier>{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC946}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Runtime\FortniteGame">
+      <UniqueIdentifier>{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC947}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Runtime\GameplayAbilities">
+      <UniqueIdentifier>{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC948}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK">
+      <UniqueIdentifier>{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC949}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Runtime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Offsets.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Plugins\Atlas\Public\Atlas.h">
+      <Filter>Engine\Plugins\Atlas</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Plugins\Atlas\Lategame\Public\Lategame.h">
+      <Filter>Engine\Plugins\Atlas</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Runtime\Engine\Actor\Public\Actor.h">
+      <Filter>Engine\Runtime\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Runtime\Engine\DispatchRequest\Public\DispatchRequest.h">
+      <Filter>Engine\Runtime\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Runtime\Engine\NetDriver\Public\NetDriver.h">
+      <Filter>Engine\Runtime\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Runtime\FortniteGame\Athena\Public\FortAthenaVehicle.h">
+      <Filter>Engine\Runtime\FortniteGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Runtime\FortniteGame\Athena\Public\FortGameModeAthena.h">
+      <Filter>Engine\Runtime\FortniteGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Runtime\FortniteGame\Athena\Public\FortPlayerControllerAthena.h">
+      <Filter>Engine\Runtime\FortniteGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Runtime\FortniteGame\Athena\Public\FortPlaylistAthena.h">
+      <Filter>Engine\Runtime\FortniteGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Runtime\FortniteGame\Building\Public\BuildingContainer.h">
+      <Filter>Engine\Runtime\FortniteGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Runtime\FortniteGame\Building\Public\BuildingSMActor.h">
+      <Filter>Engine\Runtime\FortniteGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Runtime\FortniteGame\Creative\Public\FortAthenaCreativePortal.h">
+      <Filter>Engine\Runtime\FortniteGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Runtime\FortniteGame\Creative\Public\FortCreativeMoveTool.h">
+      <Filter>Engine\Runtime\FortniteGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Runtime\FortniteGame\Creative\Public\FortMinigame.h">
+      <Filter>Engine\Runtime\FortniteGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Runtime\FortniteGame\Creative\Public\FortMinigameSettingsBuilding.h">
+      <Filter>Engine\Runtime\FortniteGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Runtime\FortniteGame\Creative\Public\FortPlaysetItemDefinition.h">
+      <Filter>Engine\Runtime\FortniteGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Runtime\FortniteGame\Inventory\Public\FortInventory.h">
+      <Filter>Engine\Runtime\FortniteGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Runtime\FortniteGame\Player\Public\FortPlayerController.h">
+      <Filter>Engine\Runtime\FortniteGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Runtime\FortniteGame\Player\Public\FortPlayerPawn.h">
+      <Filter>Engine\Runtime\FortniteGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Runtime\FortniteGame\Quests\Public\FortQuestManager.h">
+      <Filter>Engine\Runtime\FortniteGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Runtime\GameplayAbilities\Public\AbilitySystemComponent.h">
+      <Filter>Engine\Runtime\GameplayAbilities</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\PropertyFixup.hpp">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\SDK.hpp">
+      <Filter>SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="SDK\UnrealContainers.hpp">
+      <Filter>SDK</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Runtime.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Plugins\Atlas\Private\Atlas.cpp">
+      <Filter>Engine\Plugins\Atlas</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Plugins\Atlas\Lategame\Private\Lategame.cpp">
+      <Filter>Engine\Plugins\Atlas</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Runtime\Engine\Actor\Private\Actor.cpp">
+      <Filter>Engine\Runtime\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Runtime\Engine\DispatchRequest\Private\DispatchRequest.cpp">
+      <Filter>Engine\Runtime\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Runtime\Engine\NetDriver\Private\NetDriver.cpp">
+      <Filter>Engine\Runtime\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Runtime\FortniteGame\Athena\Private\FortAthenaVehicle.cpp">
+      <Filter>Engine\Runtime\FortniteGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Runtime\FortniteGame\Athena\Private\FortGameModeAthena.cpp">
+      <Filter>Engine\Runtime\FortniteGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Runtime\FortniteGame\Athena\Private\FortPlayerControllerAthena.cpp">
+      <Filter>Engine\Runtime\FortniteGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Runtime\FortniteGame\Athena\Private\FortPlaylistAthena.cpp">
+      <Filter>Engine\Runtime\FortniteGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Runtime\FortniteGame\Building\Private\BuildingContainer.cpp">
+      <Filter>Engine\Runtime\FortniteGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Runtime\FortniteGame\Building\Private\BuildingSMActor.cpp">
+      <Filter>Engine\Runtime\FortniteGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Runtime\FortniteGame\Creative\Private\FortAthenaCreativePortal.cpp">
+      <Filter>Engine\Runtime\FortniteGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Runtime\FortniteGame\Creative\Private\FortCreativeMoveTool.cpp">
+      <Filter>Engine\Runtime\FortniteGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Runtime\FortniteGame\Creative\Private\FortMinigame.cpp">
+      <Filter>Engine\Runtime\FortniteGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Runtime\FortniteGame\Creative\Private\FortMinigameSettingsBuilding.cpp">
+      <Filter>Engine\Runtime\FortniteGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Runtime\FortniteGame\Creative\Private\FortPlaysetItemDefinition.cpp">
+      <Filter>Engine\Runtime\FortniteGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Runtime\FortniteGame\Inventory\Private\FortInventory.cpp">
+      <Filter>Engine\Runtime\FortniteGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Runtime\FortniteGame\Player\Private\FortPlayerController.cpp">
+      <Filter>Engine\Runtime\FortniteGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Runtime\FortniteGame\Player\Private\FortPlayerPawn.cpp">
+      <Filter>Engine\Runtime\FortniteGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Runtime\FortniteGame\Quests\Private\FortQuestManager.cpp">
+      <Filter>Engine\Runtime\FortniteGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Runtime\GameplayAbilities\Private\AbilitySystemComponent.cpp">
+      <Filter>Engine\Runtime\GameplayAbilities</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\SDK\Basic.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\SDK\CoreUObject_functions.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\SDK\Engine_functions.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\SDK\FortniteGame_functions.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="SDK\SDK\GameplayAbilities_functions.cpp">
+      <Filter>SDK</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SDK\NameCollisions.inl">
+      <Filter>SDK</Filter>
+    </None>
+  </ItemGroup>
+</Project>
