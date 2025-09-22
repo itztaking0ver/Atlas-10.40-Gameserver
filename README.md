@@ -7,7 +7,7 @@ This was rushed, some cool features though.
 - [x] Creative (Ending/Starting Game, Loading/Saving Islands)
 - [x] Lategame
 - [x] Quests
-- [ ] AI Player Bots
+- [x] AI Player Bots
 - [ ] Full Map
 
 ## HOW TO CHANGE CONFIG?
