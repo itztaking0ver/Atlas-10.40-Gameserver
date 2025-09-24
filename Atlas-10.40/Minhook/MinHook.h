@@ -27,7 +27,7 @@
  */
 
 #pragma once
-#pragma comment(lib, "Atlas/Minhook/minhook.lib")
+#pragma comment(lib, "minhook.lib")
 #if !(defined _M_IX86) && !(defined _M_X64) && !(defined __i386__) && !(defined __x86_64__)
 #error MinHook supports only x86 and x64 systems.
 #endif

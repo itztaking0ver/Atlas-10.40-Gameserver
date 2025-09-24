@@ -80,13 +80,13 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>./Minhook</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>./Minhook;$(ProjectDir)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>./Minhook</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\jayden\Documents\GitHub\Atlas-10.40-Gameserver\Atlas-10.40\Minhook;C:\Users\jayden\Documents\GitHub\Atlas-10.40-Gameserver\Atlas\Minhook</AdditionalLibraryDirectories>
       <AdditionalDependencies>minhook.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -101,7 +101,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>./Minhook</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>./Minhook;$(ProjectDir)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -109,7 +109,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>./Minhook</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\jayden\Documents\GitHub\Atlas-10.40-Gameserver\Atlas-10.40\Minhook;C:\Users\jayden\Documents\GitHub\Atlas-10.40-Gameserver\Atlas\Minhook</AdditionalLibraryDirectories>
       <AdditionalDependencies>minhook.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -122,13 +122,13 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>./Minhook</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>./Minhook;$(ProjectDir)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>./Minhook</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\jayden\Documents\GitHub\Atlas-10.40-Gameserver\Atlas-10.40\Minhook;C:\Users\jayden\Documents\GitHub\Atlas-10.40-Gameserver\Atlas\Minhook</AdditionalLibraryDirectories>
       <AdditionalDependencies>minhook.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -143,7 +143,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>./Minhook</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>./Minhook;$(ProjectDir)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -151,7 +151,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>./Minhook</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\jayden\Documents\GitHub\Atlas-10.40-Gameserver\Atlas-10.40\Minhook;C:\Users\jayden\Documents\GitHub\Atlas-10.40-Gameserver\Atlas\Minhook</AdditionalLibraryDirectories>
       <AdditionalDependencies>minhook.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -213,6 +213,15 @@
     <ClCompile Include="SDK\SDK\Engine_functions.cpp" />
     <ClCompile Include="SDK\SDK\FortniteGame_functions.cpp" />
     <ClCompile Include="SDK\SDK\GameplayAbilities_functions.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Bots.h" />
+    <ClInclude Include="PlayerBots.h" />
+    <ClInclude Include="ServerBotManager.h" />
+    <ClInclude Include="Vehicles.h" />
+    <ClInclude Include="BotNames.h" />
+    <ClInclude Include="vbucks.h" />
+    <ClInclude Include="API.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="SDK\NameCollisions.inl" />

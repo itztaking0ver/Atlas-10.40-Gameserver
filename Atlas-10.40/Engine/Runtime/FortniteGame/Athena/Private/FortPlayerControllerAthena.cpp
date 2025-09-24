@@ -148,7 +148,7 @@ void FortPlayerControllerAthena::ClientOnPawnDied(AFortPlayerControllerAthena* P
     {
         PlayerState->Place = GameState->PlayersLeft;
         PlayerState->OnRep_Place();
-    _Dead:
+        
         FAthenaMatchStats& Stats = PlayerController->MatchReport->MatchStats;
         FAthenaMatchTeamStats& TeamStats = PlayerController->MatchReport->TeamStats;
 

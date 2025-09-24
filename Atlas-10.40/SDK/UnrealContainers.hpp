@@ -9,6 +9,10 @@
 // Container implementations with iterators. See https://github.com/Fischsalat/UnrealContainers
 
 #include <string>
+#include <iostream>
+#include <ios>
+#include <ostream>
+#include <istream>
 #include <Windows.h>
 #include <intrin.h>
 
@@ -591,7 +595,7 @@ namespace UC
 	class FString : public TArray<wchar_t>
 	{
 	public:
-		friend std::ostream& operator<<(std::ostream& Stream, const UC::FString& Str) { return Stream << Str.ToString(); }
+		friend std::ostream& operator<<(std::ostream& Stream, const UC::FString& Str);
 
 	public:
 		using TArray::TArray;
@@ -1070,4 +1074,10 @@ namespace UC
 	static_assert(sizeof(TArray<int32>) == 0x10, "TArray has a wrong size!");
 	static_assert(sizeof(TSet<int32>) == 0x50, "TSet has a wrong size!");
 	static_assert(sizeof(TMap<int32, int32>) == 0x50, "TMap has a wrong size!");
+
+	// Implementation of the operator<< for FString
+	inline std::ostream& operator<<(std::ostream& Stream, const UC::FString& Str) 
+	{ 
+		return Stream << Str.ToString(); 
+	}
 }

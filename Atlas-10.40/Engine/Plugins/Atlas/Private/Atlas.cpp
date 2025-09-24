@@ -15,6 +15,10 @@
 #include "../../../Runtime/FortniteGame/Creative/Public/FortMinigame.h"
 #include "../../../Runtime/FortniteGame/Creative/Public/FortMinigameSettingsBuilding.h"
 #include "../../../Runtime/Engine/Actor/Public/Actor.h"
+#include "Bots.h"
+#include "PlayerBots.h"
+#include "ServerBotManager.h"
+#include "Vehicles.h"
 
 void Atlas::SetState(const std::string& State)
 {
@@ -58,6 +62,21 @@ void Atlas::Initialize()
     Runtime::_HookVT(AFortPlayerControllerAthena::GetDefaultObj()->VTable, 0x43F, RetTrue);
 
     for (auto& NullFunc : Runtime::Offsets::NullFuncs) Runtime::Patch(NullFunc, 0xC3);
+
+    // Initialize bot system
+    if (UAtlas->bBotsEnabled) {
+        ServerBotManager::HookAll();
+        Log("Bot system initialized - MaxBots: " + std::to_string(UAtlas->MaxBotsToSpawn));
+    }
+
+    // Initialize vehicle system (only if lategame is off)
+    if (!UAtlas->bLategame && UAtlas->bVehiclesEnabled) {
+        Vehicles::EnableVehicles();
+        Log("Vehicle system initialized");
+    }
+    else if (UAtlas->bLategame) {
+        Log("Vehicle system disabled - lategame is on");
+    }
 
 	UWorld::GetWorld()->OwningGameInstance->LocalPlayers.Remove(0);
 	*(bool*)Runtime::Offsets::GIsClient = false;

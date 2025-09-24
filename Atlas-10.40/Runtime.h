@@ -106,10 +106,10 @@ namespace Runtime
 		auto SR = sin(Rotation.Roll * DIVIDE_BY_2);
 		auto CR = cos(Rotation.Roll * DIVIDE_BY_2);
 
-		Quat.X = CR * SP * SY - SR * CP * CY;
-		Quat.Y = -CR * SP * CY - SR * CP * SY;
-		Quat.Z = CR * CP * SY - SR * SP * CY;
-		Quat.W = CR * CP * CY + SR * SP * SY;
+		Quat.X = static_cast<float>(CR * SP * SY - SR * CP * CY);
+		Quat.Y = static_cast<float>(-CR * SP * CY - SR * CP * SY);
+		Quat.Z = static_cast<float>(CR * CP * SY - SR * SP * CY);
+		Quat.W = static_cast<float>(CR * CP * CY + SR * SP * SY);
 
 		Transform.Rotation = Quat;
 		Transform.Scale3D = Scale3D;
@@ -137,10 +137,10 @@ namespace Runtime
 		auto SR = sin(Rotation.Roll * DIVIDE_BY_2);
 		auto CR = cos(Rotation.Roll * DIVIDE_BY_2);
 
-		Quat.X = CR * SP * SY - SR * CP * CY;
-		Quat.Y = -CR * SP * CY - SR * CP * SY;
-		Quat.Z = CR * CP * SY - SR * SP * CY;
-		Quat.W = CR * CP * CY + SR * SP * SY;
+		Quat.X = static_cast<float>(CR * SP * SY - SR * CP * CY);
+		Quat.Y = static_cast<float>(-CR * SP * CY - SR * CP * SY);
+		Quat.Z = static_cast<float>(CR * CP * SY - SR * SP * CY);
+		Quat.W = static_cast<float>(CR * CP * CY + SR * SP * SY);
 
 		Transform.Rotation = Quat;
 		Transform.Scale3D = Scale3D;
@@ -178,10 +178,10 @@ namespace Runtime
 		auto SR = sin(Rotation.Roll * DIVIDE_BY_2);
 		auto CR = cos(Rotation.Roll * DIVIDE_BY_2);
 
-		Quat.X = CR * SP * SY - SR * CP * CY;
-		Quat.Y = -CR * SP * CY - SR * CP * SY;
-		Quat.Z = CR * CP * SY - SR * SP * CY;
-		Quat.W = CR * CP * CY + SR * SP * SY;
+		Quat.X = static_cast<float>(CR * SP * SY - SR * CP * CY);
+		Quat.Y = static_cast<float>(-CR * SP * CY - SR * CP * SY);
+		Quat.Z = static_cast<float>(CR * CP * SY - SR * SP * CY);
+		Quat.W = static_cast<float>(CR * CP * CY + SR * SP * SY);
 
 		Transform.Rotation = Quat;
 		Transform.Scale3D = Scale3D;
