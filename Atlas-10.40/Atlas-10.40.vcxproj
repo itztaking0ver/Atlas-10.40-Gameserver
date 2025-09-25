@@ -86,7 +86,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>C:\Users\jayden\Documents\GitHub\Atlas-10.40-Gameserver\Atlas-10.40\Minhook;C:\Users\jayden\Documents\GitHub\Atlas-10.40-Gameserver\Atlas\Minhook</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)Minhook;$(SolutionDir)Atlas\Minhook</AdditionalLibraryDirectories>
       <AdditionalDependencies>minhook.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -109,7 +109,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>C:\Users\jayden\Documents\GitHub\Atlas-10.40-Gameserver\Atlas-10.40\Minhook;C:\Users\jayden\Documents\GitHub\Atlas-10.40-Gameserver\Atlas\Minhook</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)Minhook;$(SolutionDir)Atlas\Minhook</AdditionalLibraryDirectories>
       <AdditionalDependencies>minhook.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -128,7 +128,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>C:\Users\jayden\Documents\GitHub\Atlas-10.40-Gameserver\Atlas-10.40\Minhook;C:\Users\jayden\Documents\GitHub\Atlas-10.40-Gameserver\Atlas\Minhook</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)Minhook;$(SolutionDir)Atlas\Minhook</AdditionalLibraryDirectories>
       <AdditionalDependencies>minhook.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -151,7 +151,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>C:\Users\jayden\Documents\GitHub\Atlas-10.40-Gameserver\Atlas-10.40\Minhook;C:\Users\jayden\Documents\GitHub\Atlas-10.40-Gameserver\Atlas\Minhook</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)Minhook;$(SolutionDir)Atlas\Minhook</AdditionalLibraryDirectories>
       <AdditionalDependencies>minhook.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
